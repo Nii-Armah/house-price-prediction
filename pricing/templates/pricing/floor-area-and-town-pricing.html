@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>House Price Estimation: Floor Area and Town</title>
+        <link href="{% static 'base.css' %}" rel="stylesheet">
+    </head>
+
+    <body>
+        <h2>House Price Estimation: Floor Area and Town</h2>
+
+        <div class="result">
+            <p class="area">Square Area: <span>200 km<sup>2</sup></span></p>
+            <p class="location">Location: <span>Accra</span></p>
+            <p class="price">Price: <span>GHS 2000</span></p>
+        </div>
+
+        <form method="post">
+            <div class="form-fields">
+                <input  type="number" name="area" placeholder="Floor Area of House" required/>
+                <select name="location" required>
+                    <option value="">--Location--</option>
+                    <option value="accra">Accra</option>
+                    <option value="kwabenya">Kwabenya</option>
+                    <option value="kumasi">Kumasi</option>
+                </select>
+                <input type="submit" value="Estimate House Price"/>
+            </div>
+        </form>
+    </body>
+</html>

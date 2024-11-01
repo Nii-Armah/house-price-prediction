@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>House Price Estimation</title>
+        <link href="{% static 'base.css' %}" rel="stylesheet" />
+    </head>
+
+    <body>
+        <h2>House Price Estimation</h2>
+        <div class="links">
+            <a href="{% url 'floor-area-pricing' %}">Estimate with Floor Area of House</a>
+            <a href={% url 'floor-area-and-town-pricing' %}>Estimate with Floor Area and Location of House</a>
+        </div>
+    </body>
+</html>

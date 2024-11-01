@@ -1,0 +1,61 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+input, select {
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+input:first-child, select {
+    margin-bottom: 10px;
+}
+
+input:last-child {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+a {
+    border: 1px solid black;
+    padding: 20px 10px;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+}
+
+a:first-child {
+    margin-bottom: 15px;
+}
+
+.result {
+    position: absolute;
+    top: 25px;
+}
+
+.area, .price, .location {
+    font-size: 23px;
+    padding: 0;
+}
+
+.result span {
+    font-weight: 600;
+}
