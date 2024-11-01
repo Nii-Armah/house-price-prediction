@@ -21,7 +21,7 @@
         <form method="post">
             {% csrf_token %}
             <div class="form-fields">
-                <input  type="number" name="area" placeholder="Floor Area of House" required/>
+                <input  type="number" step="any" name="area" placeholder="Floor Area of House" required/>
                 <select name="location" required>
                     <option value="">--Location--</option>
                     <option value="accra">Accra</option>
