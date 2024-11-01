@@ -7,15 +7,18 @@
         <link href="{% static 'base.css' %}" rel="stylesheet">
     </head>
 
+    {% if price %}
     <div class="result">
-        <p class="area">Square Area: <span>200 km<sup>2</sup></span></p>
-        <p class="price">Price: <span>GHS 2000</span></p>
+        <p class="area">Square Area: <span>{{ area }} km<sup>2</sup></span></p>
+        <p class="price">Price: <span>GHS {{ price }}</span></p>
     </div>
+    {% endif %}
 
 
     <body>
         <h2>House Price Estimation: Floor Area</h2>
         <form method="post">
+            {% csrf_token %}
             <div class="form-fields">
                 <input  type="number" name="area" placeholder="Floor Area of House" required/>
                 <input type="submit" value="Estimate House Price"/>
